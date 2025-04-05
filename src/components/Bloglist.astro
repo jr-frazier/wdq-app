@@ -1,0 +1,19 @@
+---
+import { LinkCard } from '@astrojs/starlight/components';
+
+const blogList = [{
+    name: "Dan Abramov",
+    link: "https://overreacted.io/",
+    description: "Dan is a React core contributor and author of React Hooks."
+    },
+{
+    name: "Donavon West",
+    link: "https://americanexpress.io/u/donavon/",
+    description: "Donavon is a long-time JavaScript veteran and an adamant believer in clean code."
+    },
+]
+
+---
+
+
+{blogList.map((item) => <LinkCard title={item.name} href={item.link} description={item.description} />)}
